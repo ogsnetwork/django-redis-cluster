@@ -42,7 +42,8 @@ class ConnectionFactory(object):
         '''创建连接池'''
 
         cp_params = dict(params)
-        cp_params.update({'decode_responses': True})
+        cp_params.update({
+            'decode_responses': True, 'skip_full_coverage_check': True})
         startup_nodes = self._parse_startup_nodes()
         pool = ClusterConnectionPool(startup_nodes, **cp_params)
 
