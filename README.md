@@ -10,7 +10,7 @@ Django Redis3.0+ 集群缓存应用
 
 Python 3.0+
 
-Django>=1.9.6
+Django==1.8.1
 
 redis>=2.10.5
 
