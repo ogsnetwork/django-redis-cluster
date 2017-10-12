@@ -34,4 +34,7 @@ class PickleSerializer(BaseSerializer):
         return pickle.dumps(value, self._pickle_version)
 
     def loads(self, value):
-        return pickle.loads(force_bytes(value))
+        try:
+            return pickle.loads(force_bytes(value))
+        except UnicodeDecodeError:
+            return pickle.loads(force_bytes(value).decode('utf-8'))
