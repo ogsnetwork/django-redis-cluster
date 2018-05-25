@@ -19,7 +19,7 @@ setup(
     ],
     description = description.strip(),
     install_requires = [
-        "Django==1.8.1",
+        "Django>=1.8.1",
         "redis>=2.10.5",
         "redis-py-cluster>=1.2.0",
         "msgpack-python>=0.4.7",
